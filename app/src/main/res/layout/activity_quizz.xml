@@ -14,6 +14,7 @@
         android:background="#0A21A1">
 
         <ImageView
+            android:id="@+id/backbtn"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_centerVertical="true"
@@ -21,15 +22,17 @@
             android:src="@drawable/back_btn"/>
 
         <TextView
+            android:id="@+id/selectedtopicname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Selected Topic Name"
             android:textColor="#ffffff"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -45,6 +48,7 @@
                 android:src="@drawable/ic_baseline_timer_24" />
 
             <TextView
+                android:id="@+id/timer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -54,5 +58,103 @@
 
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/questions"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_back_white10"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="1/10"
+        android:textColor="#255BAC"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/around_back_light_yellow"
+        android:gravity="center"
+        android:minHeight="100dp"
+        android:text="Questions Will Come Here...!"
+        android:padding="20dp"
+        android:textColor="#040404"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="option 01"
+
+        android:background="@drawable/round_back_white_storke02"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="option 02"
+
+        android:background="@drawable/round_back_white_storke02"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="option 03"
+
+        android:background="@drawable/round_back_white_storke02"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/option4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="option 04"
+
+        android:background="@drawable/round_back_white_storke02"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:layout_marginEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Next"
+
+        android:background="@drawable/round_back_ground"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:layout_marginEnd="20dp"/>
+
+
+
+
 
 </LinearLayout>
