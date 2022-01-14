@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/software project/KZoneFoodApp/app/src/main/res/drawable/around_back_white_stroke10.xml" value="0.2222222222222222" />
+        <entry key="..\:/software project/KZoneFoodApp/app/src/main/res/drawable/ic_baseline_timer_24.xml" value="0.240625" />
         <entry key="..\:/software project/KZoneFoodApp/app/src/main/res/drawable/image_logo_style.xml" value="0.240625" />
         <entry key="..\:/software project/KZoneFoodApp/app/src/main/res/drawable/round_back_ground.xml" value="0.240625" />
         <entry key="..\:/software project/KZoneFoodApp/app/src/main/res/drawable/round_back_white10.xml" value="0.240625" />
         <entry key="..\:/software project/KZoneFoodApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/software project/KZoneFoodApp/app/src/main/res/layout/activity_quizz.xml" value="0.1" />
       </map>
     </option>
   </component>

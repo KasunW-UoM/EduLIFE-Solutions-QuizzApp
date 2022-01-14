@@ -2,11 +2,12 @@ package com.hit.kzonefoodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -89,6 +90,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+        });
+
+        startQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedTopicName.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Please Select the Topic",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Intent intent= new Intent(MainActivity.this,QuizzActivity.class);
+                    intent.putExtra("selectedTopic",selectedTopicName);
+                    startActivity(intent);
+
+                }
+            }
         });
     }
 }
