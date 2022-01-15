@@ -27,9 +27,10 @@ public class QuizzActivity extends AppCompatActivity {
     private int totalTimeInMin =1;
     private int seconds = 0;
 
-    private final List<QuestionsList> questionsList = new ArrayList<>();
+    private List<QuestionsList> questionsList;
 
 
+    private int currentQuestionPosition = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +54,23 @@ public class QuizzActivity extends AppCompatActivity {
         final String getSelectedTopicName = getIntent().getStringExtra("selectedTopic");
 
 
-        selectedTopicName.setText(getSelectedTopicName);
+        //selectedTopicName.setText(getSelectedTopicName);
+
+        questionsList = QuestionsBank.getQuestions(getSelectedTopicName);
 
         startTimer(timer);
+
+        questions.setText((currentQuestionPosition+1) + '/' +questionsList.size());
+
+        question.setText(questionsList.get(0).getQuestion());
+
+
+
+        option1.setText(questionsList.get(0).getOption1());
+        option2.setText(questionsList.get(0).getOption2());
+        option3.setText(questionsList.get(0).getOption3());
+        option4.setText(questionsList.get(0).getOption4());
+        
 
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +94,13 @@ public class QuizzActivity extends AppCompatActivity {
         });
 
         option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
