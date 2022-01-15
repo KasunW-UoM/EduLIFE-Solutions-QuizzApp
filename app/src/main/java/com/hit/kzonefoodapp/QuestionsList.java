@@ -46,13 +46,12 @@ public class QuestionsList {
         return userSelectedAnswer;
     }
 
-    /*
+
     public void setQuestion(String question) {
         this.question = question;
     }
 
-     */
-    /*
+
     public void setOption1(String option1) {
         this.option1 = option1;
     }
@@ -72,7 +71,7 @@ public class QuestionsList {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
-*/
+
     public void setUserSelectedAnswer(String userSelectedAnswer) {
         this.userSelectedAnswer = userSelectedAnswer;
     }
