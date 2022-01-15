@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,6 +32,8 @@ public class QuizzActivity extends AppCompatActivity {
 
 
     private int currentQuestionPosition = 0;
+
+    private String selectedOptionByUser = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,11 +73,21 @@ public class QuizzActivity extends AppCompatActivity {
         option2.setText(questionsList.get(0).getOption2());
         option3.setText(questionsList.get(0).getOption3());
         option4.setText(questionsList.get(0).getOption4());
-        
+
 
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(selectedOptionByUser.isEmpty()){
+                    selectedOptionByUser = option1.getText().toString();
+                    option1.setBackgroundResource(R.drawable.around_back_read10);
+                    option1.setTextColor(Color.WHITE);
+
+                    revealAnswer();
+
+                    questionsList.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
+                }
 
             }
         });
@@ -83,6 +96,16 @@ public class QuizzActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(selectedOptionByUser.isEmpty()){
+                    selectedOptionByUser = option2.getText().toString();
+                    option2.setBackgroundResource(R.drawable.around_back_read10);
+                    option2.setTextColor(Color.WHITE);
+
+                    revealAnswer();
+
+                    questionsList.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
+                }
+
             }
         });
 
@@ -90,12 +113,30 @@ public class QuizzActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(selectedOptionByUser.isEmpty()){
+                    selectedOptionByUser = option3.getText().toString();
+                    option3.setBackgroundResource(R.drawable.around_back_read10);
+                    option3.setTextColor(Color.WHITE);
+
+                    revealAnswer();
+
+                    questionsList.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
+                }
             }
         });
 
         option4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(selectedOptionByUser.isEmpty()){
+                    selectedOptionByUser = option4.getText().toString();
+                    option4.setBackgroundResource(R.drawable.around_back_read10);
+                    option4.setTextColor(Color.WHITE);
+
+                    revealAnswer();
+
+                    questionsList.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
+                }
 
             }
         });
@@ -103,6 +144,11 @@ public class QuizzActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(selectedOptionByUser.isEmpty()){
+                    
+                    Toast.makeText(QuizzActivity.this,"Please select the option ...!",Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
@@ -215,6 +261,27 @@ public class QuizzActivity extends AppCompatActivity {
 
         startActivity(new Intent(QuizzActivity.this,MainActivity.class));
         finish();
+    }
+
+    private void revealAnswer(){
+        final String getAnswer = questionsList.get(currentQuestionPosition).getAnswer();
+
+        if(option1.getText().toString().equals(getAnswer)){
+            option1.setBackgroundResource(R.drawable.around_back_grawan10);
+            option1.setTextColor(Color.WHITE);
+        }
+        else if(option2.getText().toString().equals(getAnswer)){
+            option2.setBackgroundResource(R.drawable.around_back_grawan10);
+            option2.setTextColor(Color.WHITE);
+        }
+        else if(option3.getText().toString().equals(getAnswer)){
+            option3.setBackgroundResource(R.drawable.around_back_grawan10);
+            option3.setTextColor(Color.WHITE);
+        }
+        else if(option4.getText().toString().equals(getAnswer)){
+            option4.setBackgroundResource(R.drawable.around_back_grawan10);
+            option4.setTextColor(Color.WHITE);
+        }
     }
 
 }
