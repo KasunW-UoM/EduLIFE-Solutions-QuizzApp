@@ -8,6 +8,7 @@
     tools:context=".QuizResults">
 
     <ImageView
+        android:id="@+id/congratulationIcon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -15,5 +16,56 @@
         android:layout_marginEnd="10dp"
         android:adjustViewBounds="true"
         android:src="@drawable/cong" />
+
+    <TextView
+        android:id="@+id/sucess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_below="@+id/congratulationIcon"
+        android:text="You're Sucessfully completed a Quiz"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_below="@+id/sucess"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CorrectAnswers"
+            android:text="Correct Answers is 0"
+            android:textColor="#11CA18"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inCorrectAnswers"
+            android:text="Wrong Answers is 0"
+            android:textColor="#D61D0F"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/StartNewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Start New Quiz"
+        android:textColor="#ffffff"
+        android:background="@drawable/round_back_ground"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"/>
 
 </RelativeLayout>
