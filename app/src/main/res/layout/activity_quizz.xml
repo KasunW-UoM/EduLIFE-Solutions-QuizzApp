@@ -78,15 +78,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/around_back_light_yellow"
         android:gravity="center"
         android:minHeight="100dp"
-        android:text="Questions Will Come Here...!"
         android:padding="20dp"
+        android:text="Questions Will Come Here...!"
         android:textColor="#040404"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/option1"

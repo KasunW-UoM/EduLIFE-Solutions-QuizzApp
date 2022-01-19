@@ -57,13 +57,13 @@ public class QuizzActivity extends AppCompatActivity {
         final String getSelectedTopicName = getIntent().getStringExtra("selectedTopic");
 
 
-        //selectedTopicName.setText(getSelectedTopicName);
+//        selectedTopicName.setText(getSelectedTopicName);
 
         questionsList = QuestionsBank.getQuestions(getSelectedTopicName);
 
         startTimer(timer);
 
-        questions.setText((currentQuestionPosition+1) + '/' +questionsList.size());
+        questions.setText((currentQuestionPosition+1)+"/"+questionsList.size());
 
         question.setText(questionsList.get(0).getQuestion());
         option1.setText(questionsList.get(0).getOption1());

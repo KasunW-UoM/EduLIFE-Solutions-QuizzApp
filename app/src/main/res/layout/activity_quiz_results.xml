@@ -62,10 +62,14 @@
         android:id="@+id/StartNewBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Start New Quiz"
-        android:textColor="#ffffff"
-        android:background="@drawable/round_back_ground"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_back_ground"
+        android:text="Start New Quiz"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
