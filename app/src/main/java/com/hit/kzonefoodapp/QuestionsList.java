@@ -46,7 +46,8 @@ public class QuestionsList {
         return userSelectedAnswer;
     }
 
-    public void setUserSelectedAnswer(String selectedOptionByUser) {
+    public void setUserSelectedAnswer(String userSelectedAnswer){
+        this.userSelectedAnswer = userSelectedAnswer;
     }
 
 

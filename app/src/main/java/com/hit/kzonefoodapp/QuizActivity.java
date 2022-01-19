@@ -11,12 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class QuizzActivity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
 
     private TextView questions;
     private TextView question;
@@ -57,7 +56,7 @@ public class QuizzActivity extends AppCompatActivity {
         final String getSelectedTopicName = getIntent().getStringExtra("selectedTopic");
 
 
-//        selectedTopicName.setText(getSelectedTopicName);
+//       selectedTopicName.setText(getSelectedTopicName);
 
         questionsList = QuestionsBank.getQuestions(getSelectedTopicName);
 
@@ -144,7 +143,7 @@ public class QuizzActivity extends AppCompatActivity {
 
                 if(selectedOptionByUser.isEmpty()){
 
-                    Toast.makeText(QuizzActivity.this,"Please select the option ...!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this,"Please select the option ...!",Toast.LENGTH_SHORT).show();
                 }
                 else{
                     changeNextQuestion();
@@ -159,7 +158,7 @@ public class QuizzActivity extends AppCompatActivity {
                 quizTimer.purge();
                 quizTimer.cancel();
 
-                startActivity(new Intent(QuizzActivity.this,MainActivity.class));
+                startActivity(new Intent(QuizActivity.this,MainActivity.class));
                 finish();
             }
         });
@@ -188,7 +187,7 @@ public class QuizzActivity extends AppCompatActivity {
             option4.setTextColor(Color.parseColor("#1F6108"));
 
 
-            questions.setText((currentQuestionPosition+1) + '/' +questionsList.size());
+            questions.setText((currentQuestionPosition+1) + "/" +questionsList.size());
 
             question.setText(questionsList.get(currentQuestionPosition).getQuestion());
             option1.setText(questionsList.get(currentQuestionPosition).getOption1());
@@ -198,7 +197,7 @@ public class QuizzActivity extends AppCompatActivity {
         }
 
         else{
-            Intent intent = new Intent(QuizzActivity.this,QuizResults.class);
+            Intent intent = new Intent(QuizActivity.this,QuizResults.class);
 
             intent.putExtra("correct", getCorrectAnswers());
             intent.putExtra("Incorrect", getInCorrectAnswers());
@@ -225,8 +224,8 @@ public class QuizzActivity extends AppCompatActivity {
                      quizTimer.purge();
                      quizTimer.cancel();
 
-                     Toast.makeText(QuizzActivity.this, "Time Over ...!",Toast.LENGTH_SHORT).show();
-                     Intent intent= new Intent(QuizzActivity.this,QuizResults.class);
+                     Toast.makeText(QuizActivity.this, "Time Over ...!",Toast.LENGTH_SHORT).show();
+                     Intent intent= new Intent(QuizActivity.this,QuizResults.class);
                      intent.putExtra("Correct",getCorrectAnswers());
                      intent.putExtra("incorrect",getInCorrectAnswers());
 
@@ -301,7 +300,7 @@ public class QuizzActivity extends AppCompatActivity {
         quizTimer.purge();
         quizTimer.cancel();
 
-        startActivity(new Intent(QuizzActivity.this,MainActivity.class));
+        startActivity(new Intent(QuizActivity.this,MainActivity.class));
         finish();
     }
 

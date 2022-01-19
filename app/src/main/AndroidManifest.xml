@@ -12,8 +12,10 @@
         <activity
             android:name=".QuizResults"
             android:exported="true" />
+
+
         <activity
-            android:name=".QuizzActivity"
+            android:name=".QuizActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
